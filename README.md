@@ -1,4 +1,4 @@
-# lambda-alerting
+# lambda-aws-pagerduty-alerts
 
 This python lambda function makes your alerting to PagerDuty a bit smarter for your Route53 and Autoscaling (upscaling) alerts.
 
