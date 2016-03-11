@@ -29,7 +29,7 @@ The ASG can't upscale any further, but still has high load, this means you need 
 ## How to deploy
 
 - Set your ENV vars in a deploy.env file (you'll have to create this file)
-- Zip the contents (!!) of this directory (not the directory itself!)
+- Zip the contents (!!) of this directory (not the directory itself!) by following the docs here http://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html
 - Place on s3 or upload directly when creating your lambda function
 - It shouldn't need more than 128MB or 5s to execute
 - Connect to your alarms
