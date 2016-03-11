@@ -6,17 +6,21 @@ import json
 import boto3
 
 from lib.pagerduty import PagerDuty
+from lib.config import Config
 
 logging.basicConfig()
 logger = logging.getLogger('alerter')
-
-pagerduty = PagerDuty()
 
 
 # pylint: disable=C0103
 def handler(event, context):
     """Handle incoming SNS events for R53 and ASG Upscaling alarms."""
     logger.setLevel(logging.DEBUG)
+
+    config = Config()
+    config.load()
+
+    pagerduty = PagerDuty()
 
     # Test if we got a message
     try:
@@ -97,4 +101,4 @@ def handler(event, context):
     if alarm['NewStateValue'] == 'ALARM':
         pagerduty.send(subject, key, details)
 
-    logger.info('Finished, send out type "%s" alarm!', type)
+    logger.info('Finished, sent out type "%s" alarm!', type)
