@@ -1,0 +1,22 @@
+{
+    "Records": [
+        {
+            "EventVersion": "1.0",
+            "EventSubscriptionArn": "",
+            "EventSource": "aws:sns",
+            "Sns": {
+                "SignatureVersion": "1",
+                "Timestamp": "",
+                "Signature": "",
+                "SigningCertUrl": "",
+                "MessageId": "",
+                "Message": "{\"AlarmName\":\"awsroute53-Low-HealthCheckStatus\",\"AlarmDescription\":null,\"AWSAccountId\":\"\",\"NewStateValue\":\"OK\",\"NewStateReason\":\"Threshold Crossed: 1 datapoint (1.0) was not less than the threshold (1.0).\",\"StateChangeTime\":\"2016-03-10T15:24:28.721+0000\",\"Region\":\"US - N. Virginia\",\"OldStateValue\":\"ALARM\",\"Trigger\":{\"MetricName\":\"HealthCheckStatus\",\"Namespace\":\"AWS/Route53\",\"Statistic\":\"MINIMUM\",\"Unit\":null,\"Dimensions\":[{\"name\":\"HealthCheckId\",\"value\":\"long-random-id\"}],\"Period\":60,\"EvaluationPeriods\":1,\"ComparisonOperator\":\"LessThanThreshold\",\"Threshold\":1.0}}",
+                "MessageAttributes": {},
+                "Type": "Notification",
+                "UnsubscribeUrl": "",
+                "TopicArn": "",
+                "Subject": "OK: \"awsroute53-Low-HealthCheckStatus\" in US - N. Virginia"
+            }
+        }
+    ]
+}

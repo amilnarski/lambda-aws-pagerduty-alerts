@@ -1,0 +1,22 @@
+{
+    "Records": [
+        {
+            "EventVersion": "1.0",
+            "EventSubscriptionArn": "",
+            "EventSource": "aws:sns",
+            "Sns": {
+                "SignatureVersion": "1",
+                "Timestamp": "",
+                "Signature": "",
+                "SigningCertUrl": "",
+                "MessageId": "",
+                "Message": "{\"AlarmName\":\"ASG-AlarmScaleUp-OBV9XSYRM8ND\",\"AlarmDescription\":\"Scale up at > 33% load\",\"AWSAccountId\":\"\",\"NewStateValue\":\"OK\",\"NewStateReason\":\"Threshold Crossed: 1 datapoint (22.13) was not greater than the threshold (33.0).\",\"StateChangeTime\":\"2016-03-10T15:44:51.750+0000\",\"Region\":\"US-West-2\",\"OldStateValue\":\"ALARM\",\"Trigger\":{\"MetricName\":\"CPUUtilization\",\"Namespace\":\"AWS/EC2\",\"Statistic\":\"AVERAGE\",\"Unit\":null,\"Dimensions\":[{\"name\":\"AutoScalingGroupName\",\"value\":\"ASG-1M5NIU12P1NIM\"}],\"Period\":60,\"EvaluationPeriods\":2,\"ComparisonOperator\":\"GreaterThanThreshold\",\"Threshold\":33.0}}",
+                "MessageAttributes": {},
+                "Type": "Notification",
+                "UnsubscribeUrl": "",
+                "TopicArn": "",
+                "Subject": "OK: \"ASG-AlarmScaleUp-OBV9XSYRM8ND\" in US-West-2"
+            }
+        }
+    ]
+}

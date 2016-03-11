@@ -1,0 +1,6 @@
+build/
+.coverage
+.vagrant
+*.pyc
+*.env
+venv
