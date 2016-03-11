@@ -36,6 +36,33 @@ The ASG can't upscale any further, but still has high load, this means you need 
 - ???
 - Profit!
 
+## AWS Lambda Role
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "route53:GetHealthCheck",
+        "autoscaling:DescribeAutoScalingGroups"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+```
+
 ## Gotcha
 
 - Route53 healthchecks live in US-EAST-1, **always**! This means that the lambda function will have to be deployed to multiple regions when you're not using US-EAST-1 as your default region.
